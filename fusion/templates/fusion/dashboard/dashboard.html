@@ -1,4 +1,4 @@
-{% extends 'fusion/base.html' %}
+{% extends 'fusion/general/base.html' %}
 {% load static %}
 
 
@@ -9,7 +9,7 @@
 
 {% block body %}
     {% block navBar %}
-        {% include 'fusion/navbar.html' %}
+        {% include 'fusion/dashboard/navbar.html' %}
     {% endblock %}
 
     <div class="container" style="margin-left: 2.5%; max-right: 7.5%;">
@@ -19,7 +19,7 @@
             <div class="four wide column">
                 {% comment %}The Modules:{% endcomment %}
                 {% block modules %}
-                    {% include 'fusion/modules.html' %}
+                    {% include 'fusion/dashboard/modules.html' %}
                 {% endblock %}
             </div>
             {% comment %}Modules end here!{% endcomment %}
@@ -29,7 +29,7 @@
                 <div class="row">
                     {% comment %}The Modules:{% endcomment %}
                     {% block calendar %}
-                        {% include 'fusion/calendar.html' %}
+                        {% include 'fusion/dashboard/calendar.html' %}
                     {% endblock %}
                 </div>
 
@@ -38,7 +38,7 @@
                         <div class="five wide column">
                             {% comment %}The Alerts:{% endcomment %}
                             {% block alerts %}
-                                {% include 'fusion/alerts.html' %}
+                                {% include 'fusion/dashboard/alerts.html' %}
                             {% endblock %}
                         </div>
 
@@ -47,7 +47,7 @@
                         <div class="eight wide column">
                             {% comment %}The Modules:{% endcomment %}
                             {% block contacts %}
-                                {% include 'fusion/contacts.html' %}
+                                {% include 'fusion/dashboard/contacts.html' %}
                             {% endblock %}
                         </div>
                     </div>
