@@ -1,3 +1,4 @@
+
 {% load static %}
 
 {% block publications %}
@@ -18,6 +19,7 @@
 
 
     {% comment %}The Journal segment starts here!{% endcomment %}
+
     <div class="ui active tab segment" data-tab="journal">
         <h4 class="ui dividing header">Add a Journal</h4>
         <form class="ui form">
@@ -29,21 +31,22 @@
                     </div>
 
                     <div class="field">
-                        <label>Upload Journal</label>
-                        <input placeholder="Journal" type="file">
+                        <label>Co-author(s)</label>
+                       <!--  <input placeholder="Journal" type="file"> -->
+                        <input placeholder="Author" type="text">
                     </div>
                 </div>
             </div>
 
             <div class="field">
-                <label>Conference</label>
+                <label>Journal details</label>
                 <div class="fields">
                     <div class="eight wide field">
-                        <input placeholder="Conference" type="text">
+                        <input placeholder="Name of the Journal" type="text">
                     </div>
 
                     <div class="four wide field">
-                        <input placeholder="Place" type="text">
+                       <input placeholder="Journal" type="file">
                     </div>
 
                     <div class="four wide field">
@@ -95,18 +98,50 @@
                 <div class="ui accordion field">
                     <div class="title">
                         <i class="icon dropdown"></i>
-                        Optional Details
+                        Optional  Journal Details
                     </div>
                     <div class="content fields">
-                        <div class="field">
-                            <label>Co-Author(s)</label>
-                            <input placeholder="Co-Author(s)" type="text">
-                        </div>
+                        <div class=" four fields">
+                               <div class="field">
+                                <label>Volume No./Issue No.</label>
+                                <input placeholder="Volume No./Issue No." type="text">
+                               </div>
+                             <div class="  field">
+                                <label>Page No.</label>
+                                <input placeholder="Page No." type="text">
+                            </div>
+                             <div class=" field">
+                                <label>Paper Reference No.</label>
+                                <input placeholder="Paper Reference No." type="text">
+                            </div>
+                             <div class="field">
+                                <label>Date of Submission</label>
+                                <input placeholder="Date of Submission" type="text">
+                            </div>
+                      </div>
+                            <div class=" four fields">
+                               <div class="field">
+                                <label>Date of Publication(DOP)</label>
+                                <input placeholder="Date of Publication" type="text">
+                               </div>
+                             <div class="  field">
+                                <label>Status</label>
+                                <input placeholder="Status" type="text">
+                            </div>
+                             <div class=" field">
+                                <label>SCI/SCIE</label>
+                                <input placeholder="SCI/SCIE" type="text">
+                            </div>
+                             <div class="field">
+                                <label>Date of Issuance(DOI)</label>
+                                <input placeholder="Date of Issuance" type="text">
+                            </div>
+                      </div>
 
-                        <div class="field" style="padding-top: 8px;">
-                            <label>Conference Details</label>
+                      <!--   <div class="field" style="padding-top: 8px;">
+                            <label></label>
                             <input placeholder="Conference Details" type="text">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -120,8 +155,9 @@
             <tr>
                 <th class="sorted ascending">Sr.</th>
                 <th class="">Authors</th>
-                <th class="">Title</th>
-                <th class="" colspan="3">Conference</th>
+                <th class="">Title of Paper</th>
+                <th class="" colspan="2">Journal Detaiks</th>
+                <th class="">Uploaded Document</th>
                 <th class="">Year</th>
                 <th class="">Action</th>
             </tr>
@@ -132,28 +168,50 @@
                 <td>1.</td>
                 <td>Journal's Authors</td>
                 <td>Journal's Title</td>
-                <td colspan="3">Conference and Details</td>
+                <td colspan="2">Name of the Journal:   <br>
+                                Volume No./Issue No.:  <br>
+                                Page No.:              <br>
+                                Paper Reference No. :  <br>
+                                Date Of Submission :   <br>
+                                Date of Publication :   <br>
+                                Status              :   <br>
+                                SCI/SCIE             :  <br>
+                                Date of Issuance     :              
+
+                </td>
+                 <td></td>
                 <td>2017</td>
-                <td>Edit</td>
+                <td><button class="ui primary button">
+                          Edit
+                  </button> <br><button class="ui red button">
+                      Delete
+                     </button> </td>
             </tr>
 
-            <tr>
-                <td>2.</td>
+              <tr>
+                <td>1.</td>
                 <td>Journal's Authors</td>
                 <td>Journal's Title</td>
-                <td colspan="3">Conference and Details</td>
-                <td>2016</td>
-                <td>Edit</td>
+                <td colspan="2">Name of the Journal:   <br>
+                                Volume No./Issue No.:  <br>
+                                Page No.:              <br>
+                                Paper Reference No. :  <br>
+                                Date Of Submission :   <br>
+                                Date of Publication :   <br>
+                                Status              :   <br>
+                                SCI/SCIE             :  <br>
+                                Date of Issuance     :              
+
+                </td>
+                 <td></td>
+                <td>2017</td>
+                <td><button class="ui primary button">
+                          Edit
+                  </button> <br><button class="ui red button">
+                      Delete
+                     </button> </td>
             </tr>
 
-            <tr>
-                <td>3.</td>
-                <td>Journal's Authors</td>
-                <td>Journal's Title</td>
-                <td colspan="3">Conference and Details</td>
-                <td>2015</td>
-                <td>Edit</td>
-            </tr>
             </tbody>
 
             <tfoot>
@@ -175,33 +233,40 @@
             </tr></tfoot>
         </table>
     </div>
+
     {% comment %}The Journal segment ends here!{% endcomment %}
 
 
 
     {% comment %}The Conference segment starts here!{% endcomment %}
+
     <div class="ui tab segment" data-tab="conference">
         <h4 class="ui dividing header">Add a Conference</h4>
-        <form class="ui form">
+       <form class="ui form">
             <div class="field">
                 <div class="two fields">
                     <div class="field">
-                        <label>Published</label>
-                        <input placeholder="Published" type="text">
+                        <label>Author</label>
+                        <input placeholder="Author" type="text">
                     </div>
 
                     <div class="field">
-                        <label>Co-author</label>
-                        <input placeholder="Co-author" type="text">
+                        <label>Co-author(s)</label>
+                       <!--  <input placeholder="Journal" type="file"> -->
+                        <input placeholder="Author" type="text">
                     </div>
                 </div>
             </div>
 
             <div class="field">
-                <label>Publisher</label>
+                <label>Conference details</label>
                 <div class="fields">
-                    <div class="twelve wide field">
-                        <input placeholder="Publisher" type="text">
+                    <div class="eight wide field">
+                        <input placeholder="Name of the Conference" type="text">
+                    </div>
+
+                    <div class="four wide field">
+                       <input placeholder="Conference" type="file">
                     </div>
 
                     <div class="four wide field">
@@ -210,14 +275,24 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Year</div>
                             <div class="menu">
-                                <div class="item" data-value="2010">2010</div>
-                                <div class="item" data-value="2011">2011</div>
-                                <div class="item" data-value="2012">2012</div>
-                                <div class="item" data-value="2013">2013</div>
-                                <div class="item" data-value="2014">2014</div>
-                                <div class="item" data-value="2015">2015</div>
-                                <div class="item" data-value="2016">2016</div>
                                 <div class="item" data-value="2017">2017</div>
+                                <div class="item" data-value="2016">2016</div>
+                                <div class="item" data-value="2015">2015</div>
+                                <div class="item" data-value="2014">2014</div>
+                                <div class="item" data-value="2013">2013</div>
+                                <div class="item" data-value="2012">2012</div>
+                                <div class="item" data-value="2011">2011</div>
+                                <div class="item" data-value="2010">2010</div>
+                                <div class="item" data-value="2009">2009</div>
+                                <div class="item" data-value="2008">2008</div>
+                                <div class="item" data-value="2007">2007</div>
+                                <div class="item" data-value="2006">2006</div>
+                                <div class="item" data-value="2005">2005</div>
+                                <div class="item" data-value="2004">2004</div>
+                                <div class="item" data-value="2003">2003</div>
+                                <div class="item" data-value="2002">2002</div>
+                                <div class="item" data-value="2001">2001</div>
+                                <div class="item" data-value="2000">2000</div>
                             </div>
                         </div>
                     </div>
@@ -240,6 +315,53 @@
                     </div>
                 </div>
 
+                <div class="ui accordion field">
+                    <div class="title">
+                        <i class="icon dropdown"></i>
+                        Optional  Conference Details
+                    </div>
+                    <div class="content fields">
+                        <div class=" four fields">
+                               <div class="field">
+                                <label>Venue/Host Institute</label>
+                                <input placeholder="Volume No./Issue No." type="text">
+                               </div>
+                             <div class="  field">
+                                <label>Date of Submission(DOS)</label>
+                                <input placeholder="Page No." type="text">
+                            </div>
+                             <div class=" field">
+                                <label>Date of Acceptance(DOA)</label>
+                                <input placeholder="Paper Reference No." type="text">
+                            </div>
+                             <div class="field">
+                                <label>Date of Publication(DOP)</label>
+                                <input placeholder="Date of Submission" type="text">
+                            </div>
+                      </div>
+                            <div class=" four fields">
+                               <div class="field">
+                                <label>Page No.</label>
+                                <input placeholder="Date of Publication" type="text">
+                               </div>
+                             <div class="  field">
+                                <label>Status</label>
+                                <input placeholder="Status" type="text">
+                            </div>
+                             <div class=" field">
+                                <label>Conference Date(s)</label>
+                                <input placeholder="SCI/SCIE" type="text">
+                            </div>
+                             <div class="field">
+                                <label>ISBN No</label>
+                                <input placeholder="Date of Issuance" type="text">
+                            </div>
+                      </div>
+
+                     
+                    </div>
+                </div>
+
             </div>
         </form>
         <br>
@@ -249,45 +371,66 @@
             <thead>
             <tr>
                 <th class="sorted ascending">Sr.</th>
-                <th class="">Published</th>
-                <th class="">Title</th>
-                <th class="">Publisher</th>
+                <th class="">Authors</th>
+                <th class="">Title of Paper</th>
+                <th class="" colspan="2">Conference Detaiks</th>
+                <th class="">Uploaded Document</th>
                 <th class="">Year</th>
-                <th class="">Co-authors</th>
                 <th class="">Action</th>
             </tr>
             </thead>
 
             <tbody>
             <tr>
-                <td>1.</td>
-                <td>Journal's Name</td>
-                <td>Journal's Title</td>
-                <td>Journal's Publisher</td>
+                   <td>1.</td>
+                <td> Authors</td>
+                <td>Conference Title</td>
+                <td colspan="2">Name of the Conference:   <br>
+                                Venue/Host INstitute:  <br>
+                                Page No.:              <br>
+                                Date of Submission :  <br>
+                                Date Of Acceptance :   <br>
+                                Date of Publication :   <br>
+                                Status              :   <br>
+                                Conference Date(s)   :  <br>
+                                ISBN No.     :              
+
+                </td>
+                 <td></td>
                 <td>2017</td>
-                <td>Journal's Co-author</td>
-                <td>Edit</td>
+                <td><button class="ui primary button">
+                          Edit
+                  </button> <br><button class="ui red button">
+                      Delete
+                     </button> </td>
             </tr>
 
             <tr>
-                <td>2.</td>
-                <td>Journal's Name</td>
-                <td>Journal's Title</td>
-                <td>Journal's Publisher</td>
-                <td>2016</td>
-                <td>Journal's Co-author</td>
-                <td>Edit</td>
+                   <td>2.</td>
+                      <td> Authors</td>
+                <td>Conference Title</td>
+                <td colspan="2">Name of the Conference:   <br>
+                                Venue/Host INstitute:  <br>
+                                Page No.:              <br>
+                                Date of Submission :  <br>
+                                Date Of Acceptance :   <br>
+                                Date of Publication :   <br>
+                                Status              :   <br>
+                                Conference Date(s)   :  <br>
+                                ISBN No.     :              
+
+                </td>
+                
+                 <td></td>
+                <td>2017</td>
+                <td><button class="ui primary button">
+                          Edit
+                  </button> <br><button class="ui red button">
+                      Delete
+                     </button> </td>
             </tr>
 
-            <tr>
-                <td>3.</td>
-                <td>Journal's Name</td>
-                <td>Journal's Title</td>
-                <td>Journal's Publisher</td>
-                <td>2015</td>
-                <td>Journal's Co-author</td>
-                <td>Edit</td>
-            </tr>
+         
             </tbody>
 
             <tfoot>

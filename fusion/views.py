@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from fusion.forms import *
 from fusion.models import *
+from django.http import HttpResponse
 
 
 loginform = LoginForm()
@@ -160,3 +161,7 @@ def placement(request, emp_id):
 
 def temp(request):
     return render(request, 'fusion/general/base.html', {})
+
+def coursemanagement(request, emp_id):
+    # return HttpResponse("hey")
+    return render(request, 'fusion/coursemanagement/coursemanagement.html',{'employeePK': 1})

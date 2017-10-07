@@ -28,4 +28,7 @@ urlpatterns = [
     # fusion/temp$/
     url(r'^temp$', views.temp, name='temp'),
 
+     # fusion/coursemanagement/<pk>/
+    url(r'^coursemanagement/(?P<emp_id>[0-9]+)$', views.coursemanagement, name='coursemanagement'),
+
 ]
