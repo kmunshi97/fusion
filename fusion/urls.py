@@ -22,6 +22,12 @@ urlpatterns = [
     # fusion/profile/<pk>/
     url(r'^profile/(?P<emp_id>[0-9]+)$', views.profile, name='profile'),
 
+    # fusion/mess/<pk>/
+    url(r'^mess/(?P<emp_id>[0-9]+)$', views.mess, name='mess'),
+
+    # fusion/complaint/<pk>/
+    url(r'^complaint/(?P<emp_id>[0-9]+)$', views.complaint, name='complaint'),
+
     # fusion/dashboard/<pk>/
     url(r'^dashboard/(?P<emp_id>[0-9]+)$', views.dashboard, name='dashboard'),
 

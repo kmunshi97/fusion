@@ -1,3 +1,10 @@
+$(document).ready(function() {
+    $('#example1').progress();
+    $('#example2').progress();
+    $('#example3').progress();
+    }
+);
+
 function increment(){
     $('#example1').progress('increment');
     $('#example2').progress('increment');
